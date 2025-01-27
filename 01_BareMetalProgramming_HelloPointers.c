@@ -1,16 +1,22 @@
 #include <stdio.h> 
+#include <stdlib.h> // For abs()
+
+
+void update(int *a,int *b) {
+    int sum = *a + *b;
+    *a = sum;
+}
 
 int main() { 
-    int x = 42; 
-    int y = 50;
-    int *p = &x;  
-    int *b = &y; 
-
-    printf("x: %d\n", x);      // Value of x
-    printf("*p: %d\n", *p);      
-    printf("*b: %d\n", *b);      
+    int a, b;
+    int *pa = &a, *pb = &b;
 
 
+    printf("a: %d\n", a);   
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
 
     return 0; 
 } 
